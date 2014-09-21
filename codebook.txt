@@ -1,0 +1,104 @@
+
+
+Source of the raw  Data:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Source Data
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Source Data Info
+The Source data is the result of an  experiments  been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. For  more info please check the URL listed above as "Source of raw Data"
+
+The Source data was downloaded and processed and a set of 81 variables were extracted and transformed. The description of the final transformed variables stored on a new dataset named "tidyDataset" is given below.
+
+The variables with S.No 3 to 81 are transformed variables with original names preserved. For more details on the original variables please refer to "features.info.txt" inside  the source dataset zip file.
+
+The dataset dimension is as follows 
+
+> dim(tidyDataset)
+[1] 180  81
+
+
+
+S.No	"Variables"	"Description"
+"1"	"Activity"		"factor variable of 6 levels. Levels are  (walking,walkin_upstairs, walking_downstairs, sitting, standing,laying)"			
+"2"	"Subject"		"factor variable of 30 levels. levels(1:30). each factor is a subject of the experiment"	
+"3"	"tBodyAcc-mean()-X"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"			
+"4"	"tBodyAcc-mean()-Y"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"5"	"tBodyAcc-mean()-Z"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"6"	"tBodyAcc-std()-X"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"7"	"tBodyAcc-std()-Y"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"8"	"tBodyAcc-std()-Z"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"9"	"tGravityAcc-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"			
+"10"	"tGravityAcc-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"11"	"tGravityAcc-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"12"	"tGravityAcc-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"13"	"tGravityAcc-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"14"	"tGravityAcc-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"15"	"tBodyAccJerk-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"16"	"tBodyAccJerk-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"17"	"tBodyAccJerk-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"18"	"tBodyAccJerk-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"19"	"tBodyAccJerk-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"20"	"tBodyAccJerk-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"21"	"tBodyGyro-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"22"	"tBodyGyro-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"23"	"tBodyGyro-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"24"	"tBodyGyro-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"25"	"tBodyGyro-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"26"	"tBodyGyro-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"27"	"tBodyGyroJerk-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"28"	"tBodyGyroJerk-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"29"	"tBodyGyroJerk-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"30"	"tBodyGyroJerk-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"31"	"tBodyGyroJerk-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"32"	"tBodyGyroJerk-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"33"	"tBodyAccMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"34"	"tBodyAccMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"35"	"tGravityAccMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"36"	"tGravityAccMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"37"	"tBodyAccJerkMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"38"	"tBodyAccJerkMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"39"	"tBodyGyroMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"40"	"tBodyGyroMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"41"	"tBodyGyroJerkMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"42"	"tBodyGyroJerkMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"43"	"fBodyAcc-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"44"	"fBodyAcc-mean()-Y"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"45"	"fBodyAcc-mean()-Z"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"46"	"fBodyAcc-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"47"	"fBodyAcc-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"48"	"fBodyAcc-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"49"	"fBodyAcc-meanFreq()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"			
+"50"	"fBodyAcc-meanFreq()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"51"	"fBodyAcc-meanFreq()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"52"	"fBodyAccJerk-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"53"	"fBodyAccJerk-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"54"	"fBodyAccJerk-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"55"	"fBodyAccJerk-std()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"56"	"fBodyAccJerk-std()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"57"	"fBodyAccJerk-std()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"58"	"fBodyAccJerk-meanFreq()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"59"	"fBodyAccJerk-meanFreq()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"60"	"fBodyAccJerk-meanFreq()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"61"	"fBodyGyro-mean()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"62"	"fBodyGyro-mean()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"63"	"fBodyGyro-mean()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"64"	"fBodyGyro-std()-X"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"65"	"fBodyGyro-std()-Y"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"66"	"fBodyGyro-std()-Z"		"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"67"	"fBodyGyro-meanFreq()-X"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"68"	"fBodyGyro-meanFreq()-Y"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"69"	"fBodyGyro-meanFreq()-Z"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"70"	"fBodyAccMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"71"	"fBodyAccMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"72"	"fBodyAccMag-meanFreq()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"73"	"fBodyBodyAccJerkMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"74"	"fBodyBodyAccJerkMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"75"	"fBodyBodyAccJerkMag-meanFreq()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"76"	"fBodyBodyGyroMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"77"	"fBodyBodyGyroMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"78"	"fBodyBodyGyroMag-meanFreq()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"79"	"fBodyBodyGyroJerkMag-mean()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"80"	"fBodyBodyGyroJerkMag-std()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
+"81"	"fBodyBodyGyroJerkMag-meanFreq()"	"num variable. it is the average of the same named variable of the source data grouped at Subject -Activity level"
